@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <title>弹出层效果</title>
+</head>
+<!-- 要求：
+		1.点击登录按钮之后，页面禁止有一个遮罩层；
+		2.遮罩层中有一个对话框，对话框有登录，密码，和登录按钮以及一个关闭按钮；
+		3.点击登录，遮罩层以及对话框消失；
+ -->
+
+<body>
+    <div id="app">
+        <h3 class='layout' v-show='isShow'>弹出层</h3>
+        <button @click='login'>登录</button>
+        <div class="loginBar" v-show='isShow'>
+            <div class="loginCon">
+                <input type="text" placeholder="请输入用户名">
+                <input type="password" placeholder ="请输入密码">
+                <input type="button" @click='submit' value='提交'>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+var app = new Vue({
+    el: "#app",
+    data: {
+        isShow: false
+    },
+    methods: {
+        login() {
+            this.isShow = true
+        },
+        submit() {
+            this.isShow = false
+        }
+    }
+});
+</script>
+<style scoped>
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.layout {
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 100;
+    position: fixed;
+}
+
+.loginBar {
+    z-index: 1000;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    background:red;
+
+}
+
+.loginCon {
+    width: 400px;
+    height:300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loginCon input{
+	width:50%;
+	height:30px;
+	margin:10px 0;
+	border:none;
+	outline: none;
+	border-radius: 10px;
+	padding-left:10px;
+}
+
+</style>
+
+</html>

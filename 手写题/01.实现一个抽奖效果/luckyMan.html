@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <title>抽奖效果</title>
+</head>
+
+<body>
+    <div id="app">
+        <template>
+            <div class="content">
+                <ul>
+                    <li class='luckyBox' v-for="(item,id) in newList"  :key='item.id' :class='{active:false}'>{{item.text}}</li>
+                </ul>
+            </div>
+        </template>
+    </div>
+</body>
+<script>
+var app = new Vue({
+    el: "#app",
+    data: {
+        list: [
+            { id: 1, text: '小米一袋' },
+            { id: 2, text: '大米一袋' },
+            { id: 3, text: '蔬菜一包' },
+            { id: 4, text: '菜籽油一桶' },
+            { id: 5, text: '猪仔一只' },
+            { id: 6, text: '脸谱一个' },
+            { id: 7, text: '鲜花一束' },
+            { id: 8, text: '瓜子一包' }
+        ]
+    },
+    computed:{
+        newList(){
+            let ary = this.list.map((item,index)=>{
+                switch(index){
+                    case 3:
+                        return {
+                            ...this.list[7],
+                            index:7
+                        }
+                    case 4:
+                        return {
+                            ...this.list[3],
+                            index:3
+                        }
+                    case 5:
+                        return {
+                            ...this.list[6],
+                            index:6
+                        }
+                    case 6:
+                        return {
+                            ...this.list[5],
+                            index:5
+                        }
+                    case 7:
+                        return {
+                            ...this.list[4],
+                            index:4
+                        }
+                    default:
+                        return {
+                            ...item,
+                            index:index
+                        }
+                }
+            })
+            return ary.slice(0,4)
+                    .concat({id:'btn',text:'开始抽奖'})
+                    .concat(ary.slice(4))
+        }
+    }
+    methods: {
+       
+    }
+});
+</script>
+<style scoped>
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+li {
+    list-style: none
+}
+
+#app {
+    height:100vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    width:400px;
+    height:400px;
+    background:orange;
+}
+.content ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.luckyBox{
+    margin:16px;
+    width:100px;
+    height:100px;
+    background:green;
+}
+</style>
+
+</html>

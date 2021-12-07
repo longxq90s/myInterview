@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>窗口抖动效果</title>
+    <meta charset="utf-8">
+    <meta viewport = 'minium=1.0,maxmiun=1.0,scale=1.0'>
+    <style type="text/css">
+    	*{
+    		padding:0;
+    		margin:0;
+    	}
+    	#app{
+    		height:100vh;
+    		width:100vw;
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    	}
+    	.form{
+    		width: 300px;
+    		height: 300px;
+    		background:orange;
+    		display: flex;
+    		align-items: center;
+    		flex-direction: column;
+    		justify-content: center;
+    		animation: shaking 2s ;
+    	}
+    	.form button{
+    		width:100px;
+    		height:30px;
+    	}
+    	@keyframes shaking {
+    		0% 
+    	}
+    </style>
+</head>
+
+<body>
+    <div id='app'>
+        <form class='form'>
+            <input type="text" name="">
+            <button>×</button>
+        </form>
+    </div>
+</body>
+
+</html>

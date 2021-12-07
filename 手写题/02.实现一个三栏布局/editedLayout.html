@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>三栏布局效果</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- 实现一个三栏布局效果，左右固定200px，中间可调 -->
+	<div class='main'>
+		<div class="left"></div>
+		<div class="middle"></div>
+		<div class="right"></div>
+	</div>
+	<style type="text/css">
+		.main{
+			display: flex;
+			background-color:green;
+			height: 100px;
+			width:100%;
+			position:relative;
+		}
+		.left{
+			background: orange;
+			width:200px;
+			height:100%;
+		}
+		.middle{
+			background: red;
+			height:100%;
+			flex:1;
+		}
+		.right{
+			background: yellow;
+			width:200px;
+			height:100%;
+			position:absulute;
+			right:0;
+		}
+	</style>
+</body>
+</html>

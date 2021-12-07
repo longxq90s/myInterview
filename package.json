@@ -1,0 +1,12 @@
+{
+  "name": "Interview",
+  "version": "1.0.0",
+  "description": "起因：为什么我要开始这么个项目呢？原因其实很简单，因为我懒啊。懒得去看现成的面试题，但是又有一个现实的问题，我面试总不能告诉面试官，‘对不起，你说的我不晓得，麻烦你给我一个职位吧’。所以莫得办法，干脆自己写点面试题得了。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
