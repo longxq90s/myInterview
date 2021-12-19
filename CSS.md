@@ -1,6 +1,6 @@
 # CSS 面试题
 
-1.如何实现文字超出内容区域变成...
+## 1.如何实现文字超出内容区域变成...
 
 ```css
 overflow:hidden;
@@ -8,7 +8,20 @@ white-space:nowrap;
 text-overflow:hidden;
 ```
 
-2.伪类与伪元素区别
+在微信中实现文字超出显示...效果 
+
+默认显示两行
+
+```less
+display:-webkit-box;
+overflow:hidden;
+-webkit-box-orient:vertical;
+-webkit-line-clamp:2;
+```
+
+
+
+## 2.伪类与伪元素区别
 
 1. 伪类本质上是为了**弥补**常规CSS**选择器的不足**
 
@@ -31,7 +44,7 @@ text-overflow:hidden;
 - - 伪类：用于向某些选择器添加特殊的效果
   - 伪元素：用于将特殊的效果添加到某些选择器(标签
 
-### :after/::after和:before/::before的异同
+### 3. :after/::after和:before/::before的异同
 
 相同点
 
@@ -54,3 +67,14 @@ text-overflow:hidden;
 3. 伪对象的特效通常要使用:hover伪类样式来激活
 
 ![](C:\Users\Administrator\Desktop\github面试题\Interview\img\伪类与伪元素.png)
+
+## 4.关于相对定位于绝对定位定位是相对于哪儿进行定位的呢？
+
+static:静态定位，也是postion的默认值，没有定位，元素出现在正常的流中，忽略top\bottom\left\right或者z-index声明；
+
+relative:相对定位，生成相对定位的元素，通过top\bottom\left\right的设置相对于其自身的位置进行定位。**可以通过z-index进行层级分级。**
+
+absolute:绝对定位，生成绝对定位的元素，**相对于static定位以外其他定位**（如relative\absolute\fixed）的第一个父元素进行定位，如果父元素没有定位则相对于浏览器窗口定位，**可以通过z-index进行层级分级。**
+
+fixed:固定定位，生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过left\top\right\bottom属性进行规定。**可以通过z-index进行层级分级。**
+
