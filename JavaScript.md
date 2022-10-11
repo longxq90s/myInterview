@@ -204,4 +204,33 @@ function handleC() {
     console.log('handleC')
 }
 ```
+谈谈对原型链的理解。
+js如何实现继承？
+js有哪些数据类型？
+js有哪些判断类型的方法？
+如何判断一个变量是否数组？
+Null 和 undefined 的区别？、
+call bind apply的区别？
+防抖节流的概念？实现防抖和节流。
+深拷贝、浅拷贝的区别？如何实现深拷贝和浅拷贝？
+对比 一下var、const、let。
+ES next新特性有哪些？
+箭头函数和普通函数区别是什么？
+使用new创建对象的过程是什么样的？
+this指向系列问题。
+手写bind方法。
+谈谈对闭包的理解？什么是闭包？闭包有哪些应用场景？闭包有什么缺点？如何避免闭包？
+谈谈对js事件循环的理解？
+谈谈对promise理解？
+手写 Promise。
+实现 Promise.all方法。
+Typescript中type和interface的区别是什么？
+讲讲Typescript中的泛型？
+Typescript如何实现一个函数的重载？
+CmmonJS和ESM区别？
+柯里化是什么？有什么用？怎么实现？
+讲讲js垃圾回收机制。
+实现一个发布订阅。
+如何实现数组怕平？
+如何实现数组去重？
 

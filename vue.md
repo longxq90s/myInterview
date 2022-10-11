@@ -59,6 +59,19 @@ beforeRouteEnter、beforeRouteUpdate (2.2 新增)、beforeRouteLeavev
 vue.$set() 。vue2在外面设置响应式变量。
 
 
+讲讲Vuex的使用方法。
+讲讲Vue双向绑定原理。
+mvvm和mvc区别是什么？
+Vue组件间通信方式有哪些？
+computed和watch区别是什么？
+v-for和v-if同时使用有问题吗？
+讲讲前端路由原理。比较一下history和hash这两种路由。
+讲讲Vue的虚拟DOM，原理，好处是什么？相对于手动操作DOM，性能更好吗？
+说说Vue的keep-alive使用及原理。
+Vue父子组件生命周期触发顺序是怎样的？
+Vue.nextTick的实现？
+讲讲Vue diff算法。
+
 
 ## 拔高题--面中小企业
 
